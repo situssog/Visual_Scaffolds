@@ -1,13 +1,13 @@
 # Visual_Scaffolds
 
-Documents and scripts written by: Sergio Tusso\n
-Dept. of Evolutionary Biology\n
-Evolutionary Biology Center (EBC)\n
-Uppsala University\n
-Sweden\n
-2016\n
-\n
-Email: situssog@gmail.com \n
+Documents and scripts written by: Sergio Tusso  
+Dept. of Evolutionary Biology  
+Evolutionary Biology Center (EBC)  
+Uppsala University  
+Sweden  
+2016  
+  
+Email: situssog@gmail.com  
 
 # Description: 
 
@@ -21,63 +21,86 @@ This tool allows the visualization of genomic regions or scaffolds that were rec
 - cairocffi # visualisation package the create final figures
 
 # Input: 
-Fasta file with de-novo scaffold/s.\n
-Fasta file with reference genome and annotation (gff file). Alternatively this can be changes by a fasta file with names and sequences of interest. For instance a fasta file only with transposable sequences.\n
+Fasta file with de-novo scaffold/s.  
+Fasta file with reference genome and annotation (gff file). Alternatively this can be changes by a fasta file with names and sequences of interest. For instance a fasta file only with transposable sequences.  
 
-
+  
 # Instructions:
-Copy the script Visual_scaffolds in the same forthe with the other input files.\n
-The script is run as a module inside python/ipython.\n
-open python and load the module with the command:\n
+Copy the script Visual_scaffolds in the same forthe with the other input files.  
+The script is run as a module inside python/ipython.  
+open python and load the module with the command:  
 
-> import Visual_scaffolds
+```python
+import Visual_scaffolds
+```
 
 ## Example using a fasta file with sequences of interes:
 
-define fasta file with secuesces of interest:\n
-> file_reference_sequences = "fragments.fa"
+define fasta file with secuesces of interest:  
 
-open scaffold fasta:\n
-> scaffold_file = "full_MTR_h90.fasta"
-> scaffold_seq = Scaffold(scaffold_file)
+```python
+file_reference_sequences = "fragments.fa"
+```
 
-blast sequences to scaffold\n
-example: scaffold_seq.blast_scaffold("fasta_file.fa")\n
-> scaffold_seq.blast_scaffold(file_reference_sequences)
+open scaffold fasta:  
 
-plot scaffold with annotation:\n
-give output file between parentesis. \n
-example: scaffold_seq.plot_scaffold("output_figure_file.svg") \n
-> scaffold_seq.plot_scaffold("MTR_using_fasta.svg")
+```python
+scaffold_file = "full_MTR_h90.fasta"
+scaffold_seq = Scaffold(scaffold_file)
+```
 
+blast sequences to scaffold  
+example: scaffold_seq.blast_scaffold("fasta_file.fa")  
+```python
+scaffold_seq.blast_scaffold(file_reference_sequences)
+```
+
+plot scaffold with annotation:  
+give output file between parentesis.  
+example: scaffold_seq.plot_scaffold("output_figure_file.svg")  
+```python
+scaffold_seq.plot_scaffold("MTR_using_fasta.svg")
+```
 
 ## Example using reference genome (whole genome in fasta file) and annotation file (GFF file)
 
 Names of sequences in fasta file should be the same as chromosome names in annotation.
 The tool only extract and plot 'gene', 'ncRNA_gene', 'pseudogene', 'rRNA', 'rRNA_gene', 
-'snoRNA', 'snoRNA_gene', 'snRNA', 'snRNA_gene' and 'tRNA_gene'. \n
-\n
-If it is required to exclude some of them, delete them from the next list:\n
+'snoRNA', 'snoRNA_gene', 'snRNA', 'snRNA_gene' and 'tRNA_gene'.  
+  
+If it is required to exclude some of them, delete them from the next list:  
 
-> included_regions = ['gene', 'ncRNA_gene', 'pseudogene', 'rRNA', 'rRNA_gene', 'snoRNA', \
+```python
+included_regions = ['gene', 'ncRNA_gene', 'pseudogene', 'rRNA', 'rRNA_gene', 'snoRNA', \
 'snoRNA_gene', 'snRNA', 'snRNA_gene', 'tRNA_gene']
+```
 
-define annotation file and reference sequence:\n
-> annotation_file = "schizosaccharomyces_pombe.chr.gff3"
-> reference_genome_file = "PombeRef.fa"
+define annotation file and reference sequence:  
+```python
+annotation_file = "schizosaccharomyces_pombe.chr.gff3"
+reference_genome_file = "PombeRef.fa"
+```
 
-create annotation dictionary:\n
-> annotation_dic = annotation_Parser(annotation_file, reference_genome_file, included_regions, "reference_parsed_gff.fa")
+create annotation dictionary:  
+```python
+annotation_dic = annotation_Parser(annotation_file, reference_genome_file, included_regions, "reference_parsed_gff.fa")
+```
 
-open scaffold fasta\n
-> scaffold_file = "full_MTR_h90.fasta"
-> scaffold_seq = Scaffold(scaffold_file)
+open scaffold fasta  
+```python
+scaffold_file = "full_MTR_h90.fasta"
+scaffold_seq = Scaffold(scaffold_file)
+```
 
-blast sequences to scaffold\n
-example: scaffold_seq.blast_scaffold("fasta_file.fa")\n
-> scaffold_seq.blast_scaffold("reference_parsed_gff.fa")
+blast sequences to scaffold  
+example: scaffold_seq.blast_scaffold("fasta_file.fa")  
+```python
+scaffold_seq.blast_scaffold("reference_parsed_gff.fa")
+```
 
-plot scaffold with annotation:\n
-give output file between parentesis\n
-example: scaffold_seq.plot_scaffold("output_figure_file.svg")\n
-> scaffold_seq.plot_scaffold("MTR.svg")
+plot scaffold with annotation:  
+give output file between parentesis  
+example: scaffold_seq.plot_scaffold("output_figure_file.svg")  
+```python
+scaffold_seq.plot_scaffold("MTR.svg")
+```
