@@ -26,7 +26,7 @@ Fasta file with reference genome and annotation (gff file). Alternatively this c
 
   
 # Instructions:
-Copy the script Visual_scaffolds in the same forthe with the other input files.  
+Copy the script Visual_scaffolds in the same forder with the other input files.  
 The script is run as a module inside python/ipython.  
 open python and load the module with the command:  
 
