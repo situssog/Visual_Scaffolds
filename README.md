@@ -11,7 +11,7 @@ Email: situssog@gmail.com
 
 # Description: 
 
-This tool allows the visualization of genomic regions or scaffolds that were reconstructed de-novo. It is mainly aimed to process regions with repetitive sequences and/or with structural variances compared with a reference sequence. The tool takes the reference sequence and its annotation to extract the sequences of coding regions of sequences of interest.  Then it performs a blast with the de-novo scaffold to infer the location of different genes. It then produces a plot of the genomic region placing genes, the direction and proportion of the gene aligning to the scaffold.
+This module allows the visualization of genomic regions or scaffolds that were reconstructed de-novo. It is mainly aimed to process regions with repetitive sequences and/or with structural variances compared with a reference sequence. The module takes the reference sequence and its annotation to extract the sequences of coding regions of sequences of interest.  Then it performs a blast with the de-novo scaffold to infer the location of different genes. It then produces a plot of the genomic region placing genes, the direction and proportion of the gene aligning to the scaffold.
 
 # Dependecies:
 
