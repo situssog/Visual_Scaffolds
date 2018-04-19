@@ -5,7 +5,7 @@ Dept. of Evolutionary Biology
 Evolutionary Biology Center (EBC)  
 Uppsala University  
 Sweden  
-2016  
+2018  
   
 Email: situssog@gmail.com  
 
@@ -104,3 +104,5 @@ example: scaffold_seq.plot_scaffold("output_figure_file.svg")
 ```python
 scaffold_seq.plot_scaffold("MTR.svg")
 ```
+
+
