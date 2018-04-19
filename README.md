@@ -24,6 +24,9 @@ This module allows the visualization of genomic regions or scaffolds that were r
 Fasta file with de-novo scaffold/s. 
 Fasta file with reference genome and annotation (gff file). Alternatively this can be changes by a fasta file with names and sequences of interest. For instance a fasta file only with transposable sequences.  
 
+# Example:
+
+![Alt text](./Example_Fig.png)
   
 # Instructions:
 Copy the script Visual_scaffolds in the same forder with the other input files.  
