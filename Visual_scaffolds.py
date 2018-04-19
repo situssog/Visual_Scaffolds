@@ -14,6 +14,7 @@ from Bio.Blast.Applications import NcbiblastxCommandline
 import cairocffi as cairo
 
 
+
 class Annotation(object):
     """
     This class is included to characterise annotation elements. For instance, each gene in the annotation
