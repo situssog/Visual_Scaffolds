@@ -35,6 +35,7 @@ open python and load the module with the command:
 
 ```python
 import Visual_scaffolds
+execfile("Visual_scaffolds.py")
 ```
 
 ## Example using a fasta file with sequences of interes:
